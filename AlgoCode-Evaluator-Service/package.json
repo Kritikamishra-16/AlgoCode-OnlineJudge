@@ -1,0 +1,36 @@
+{
+  "name": "algocode-evaluator-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "npx nodemon dist/index.js",
+    "dev": "npx concurrently \"npm run watch\" \"npm start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@bull-board/express": "^5.21.6",
+    "@bull-board/ui": "^5.21.6",
+    "@types/dockerode": "^3.3.31",
+    "@types/ioredis": "^5.0.0",
+    "bull-board": "^2.1.3",
+    "bullmq": "^5.12.14",
+    "concurrently": "^8.2.2",
+    "dockerode": "^4.0.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1",
+    "winston": "^3.14.2",
+    "zod": "^3.23.8"
+  }
+}
